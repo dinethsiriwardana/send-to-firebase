@@ -62,12 +62,6 @@ Contributions are welcome! Follow these steps to contribute to the project:
 3. Make the necessary changes and commit your code.
 4. Submit a pull request explaining your changes.
 
-## License
-
-This extension is licensed under the [MIT License](LICENSE).
-
----
-
 For more information about Visual Studio Code's extension development, refer to the official [Extension API documentation](https://code.visualstudio.com/api).
 
 **Enjoy using the VS Code Extension for Firebase!**
