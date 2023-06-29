@@ -27,8 +27,7 @@ Before using this extension, make sure you have the following prerequisites:
 
 The extension contributes the following settings:
 
-- `myExtension.enable`: Enable/disable this extension.
-- `myExtension.thing`: Set to `blah` to do something.
+- `Open Firebase ConfigFile`: Edit the firebase file.
 
 To access the extension settings, go to **File > Preferences > Settings** and search for "VS Code Extension for Firebase".
 
@@ -41,7 +40,7 @@ To access the extension settings, go to **File > Preferences > Settings** and se
 
 ## Known Issues
 
-- None at the moment. Please report any issues on the [GitHub repository](https://github.com/your-username/your-repository).
+- None at the moment. Please report any issues on the [GitHub repository](https://github.com/dinethsiriwardana/send-to-firebase).
 
 ## Release Notes
 
