@@ -44,14 +44,18 @@ To access the extension settings, go to **File > Preferences > Settings** and se
 
 ## Release Notes
 
-### 1.0.0
+### 0.0.0
 
 - Initial release of the VS Code Extension for Firebase.
 
-### 1.1.0
+### 0.0.1
 
 - Added automatic timer to update Firebase data.
 - Improved Firebase configuration file management.
+
+### 0.0.2
+
+- First release on the Visual Studio Marketplace.
 
 ## Contributing
 
