@@ -1,8 +1,10 @@
 {
   "name": "send-to-firebase",
   "displayName": "Send to Firebase",
+  "publisher": "DinethSiriwardana",
   "description": "Send your project data to Firebase",
-  "version": "0.0.1",
+  "version": "0.0.3",
+  "icon": "image/icon.png",
   "engines": {
     "vscode": "^1.79.0"
   },
