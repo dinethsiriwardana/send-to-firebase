@@ -13,23 +13,35 @@ const TIMEOUT_DURATION = 60 * 3 * 1000; // 3 minutes in milliseconds
 let firebaseConfig = null;
 function activate(context) {
     console.log('Congratulations, your extension "vs-code-ectension-for-firebase" is now active!');
-    let disposable = vscode.commands.registerCommand("vs-code-ectension-for-firebase.helloWorld", () => {
-        vscode.window.showInformationMessage("Hello World from VS code Extension for Firebase!");
-    });
     let openConfigFileDisposable = vscode.commands.registerCommand("send-to-firebase.openConfigFile", () => {
         const configPath = path.join(context.extensionPath, "firebase-config.json");
         vscode.workspace.openTextDocument(configPath).then((document) => {
             vscode.window.showTextDocument(document);
         });
     });
-    context.subscriptions.push(disposable, openConfigFileDisposable);
+    let reloadAppDisposable = vscode.commands.registerCommand("send-to-firebase.reloadApp", () => {
+        console.log("Reloading the app...");
+        vscode.window.showWarningMessage("Reloading the app...");
+        // Perform any necessary cleanup or reset operations here
+        // Load Firebase config if the config file exists
+        if (fs.existsSync(configPath)) {
+            loadFirebaseConfig(configPath);
+        }
+        else {
+            vscode.window.showWarningMessage("Firebase configuration file not found");
+        }
+    });
+    context.subscriptions.push(openConfigFileDisposable, reloadAppDisposable);
     vscode.workspace.onDidOpenTextDocument(handleDocumentEventOpen);
     vscode.workspace.onDidChangeTextDocument(handleDocumentEventChange);
     const configPath = path.join(context.extensionPath, "firebase-config.json");
     checkFirebaseConfigFile(configPath);
     const watcher = vscode.workspace.createFileSystemWatcher(configPath);
     watcher.onDidChange(() => {
+        console.log("Firebase config file changed. Reloading the app...");
+        vscode.window.showWarningMessage("Firebase config file changed. Reloading the app...");
         loadFirebaseConfig(configPath);
+        // You can call any necessary functions or perform actions after the config file is changed.
     });
     // Load Firebase config if the config file exists
     if (fs.existsSync(configPath)) {
@@ -62,6 +74,7 @@ function checkFirebaseConfigFile(configPath) {
                 vscode.workspace.openTextDocument(configPath).then((document) => {
                     vscode.window.showTextDocument(document);
                 });
+                vscode.window.showWarningMessage("Run `Send to Firebase: Reload App` to Reload after configuring Firebase (F1 -> Send to Firebase: Reload App)");
             }
         });
     }

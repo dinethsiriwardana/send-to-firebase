@@ -21,22 +21,21 @@ Before using this extension, make sure you have the following prerequisites:
 1. Launch Visual Studio Code.
 2. Go to the Extensions view by clicking on the square icon on the left sidebar or pressing `Ctrl+Shift+X`.
 3. Search for "VS Code Extension for Firebase" and click **Install**.
-4. After installation, click **Reload** to activate the extension.
+4. After installation, click **YES** to `Do you want to create a new Firebase configuration file?` dialog box to configure the Firebase extension.
 
 ## Extension Settings
 
 The extension contributes the following settings:
 
-- `Open Firebase ConfigFile`: Edit the firebase file.
-
-To access the extension settings, go to **File > Preferences > Settings** and search for "VS Code Extension for Firebase".
+- `Send to Firebase: Open Config File`: Edit the firebase file.
+- `Send to FIrebase: Reload App`: Edit the firebase file.
 
 ## Usage
 
 1. Open a project folder in Visual Studio Code.
 2. The extension will automatically track the project name and the programming language of the active file.
 3. Firebase data will be sent to the configured Firebase database.
-4. You can open the Firebase configuration file by running the **Open Firebase ConfigFile** command from the Command Palette.
+4. You can open the Firebase configuration file by running the **Send to Firebase: Open Config File** command from the Command Palette.
 
 ## Known Issues
 
@@ -56,6 +55,18 @@ To access the extension settings, go to **File > Preferences > Settings** and se
 ### 0.0.2
 
 - First release on the Visual Studio Marketplace.
+
+### 0.0.3
+
+- Fixed some bugs.
+
+### 0.0.4
+
+- Add 'Send to Firebase: Reload App' for reloading manually when configuration is complete.
+
+### 1.0.0
+
+- First stable release.
 
 ## Contributing
 

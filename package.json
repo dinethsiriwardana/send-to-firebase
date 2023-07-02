@@ -3,7 +3,7 @@
   "displayName": "Send to Firebase",
   "publisher": "DinethSiriwardana",
   "description": "Send your project data to Firebase",
-  "version": "0.0.3",
+  "version": "1.0.0",
   "icon": "image/icon.png",
   "engines": {
     "vscode": "^1.79.0"
@@ -18,12 +18,12 @@
   "contributes": {
     "commands": [
       {
-        "command": "vs-code-ectension-for-firebase.helloWorld",
-        "title": "Hello World"
+        "command": "send-to-firebase.openConfigFile",
+        "title": "Send to Firebase: Open Config File"
       },
       {
-        "command": "send-to-firebase.openConfigFile",
-        "title": "Open Firebase ConfigFile"
+        "command": "send-to-firebase.reloadApp",
+        "title": "Send to FIrebase: Reload App"
       }
     ]
   },
